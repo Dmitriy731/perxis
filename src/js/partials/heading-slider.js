@@ -3,7 +3,7 @@ headingSlider = new Swiper('.js-heading-slider', {
     slidesPerView: 1,
 
     pagination: {
-        el: '.js-heading-slider .swiper-pagination',
+        el: '.js-heading-slider .b-pagination',
         clickable: true,
     },
 

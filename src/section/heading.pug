@@ -22,7 +22,8 @@ mixin heading(data)
                             span !{item.btn.text}
                             include ui-kit/icon.pug
                             +icon(item.btn.icon).--arrow
-        .swiper-pagination
+        include ui-kit/pagination.pug
+        +pagination()
         +button({})(aria-label="Предыдущий слайд").--arrow-swiper.-swiper-button-prev
             +icon("arrow-slider").--arrow-swiper
         +button({})(aria-label="Предыдущий слайд").--arrow-swiper.--arrow-swiper-next.-swiper-button-next

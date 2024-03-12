@@ -42,37 +42,4 @@
 
         margin-bottom: 20px;
     }
-
-    & .swiper-pagination {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-
-        display: flex;
-        align-items: center;
-        height: 16px;
-        column-gap: 16px;
-    }
-
-    & .swiper-pagination-bullet {
-        position: relative;
-        display: block;
-        width: 8px;
-        height: 8px;
-        border-radius: 100%;
-        background-color: @cl-white;
-        border: 4px solid transparent;
-
-        cursor: pointer;
-
-        transition: width @animation-time, height @animation-time, background-color @animation-time, border-color @animation-time;
-    }
-
-    & .swiper-pagination-bullet-active {
-        width: 16px;
-        height: 16px;
-        border-color: @cl-vivid-pink;
-        background-color: transparent;
-    }
 }
