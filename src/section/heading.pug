@@ -8,7 +8,7 @@ mixin heading(data)
                     +e.content
                         include ui-kit/title.pug
                         +title({
-                            type: 'h1',
+                            type: item === data[0] ? 'h1' : 'h2',
                             title: item.title,
                         }).--heading
                         +e.subtitle !{item.subtitile}
