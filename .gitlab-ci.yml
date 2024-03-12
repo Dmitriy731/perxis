@@ -1,0 +1,20 @@
+stages:
+  - front
+
+server1_deploy:
+  stage: front
+  tags:
+    - all_html
+  script:
+    - 'nvm use 14.0.0 && cd /home/onko-62/onko.grphn-dev.ru/www && git reset --hard && git pull origin && cd src/js && npm i  --prefer-offline --no-audit --progress=false && cd ../.. && gulp build'
+  only:
+    - main
+
+server2_deploy:
+  stage: front
+  tags:
+    - bitrix-html
+  script:
+  - 'whoami && cd /home/bitrix/ext_www/onko-back.grphn-dev.ru/src && git reset --hard && git pull origin && cd src/js && npm i --prefer-offline --no-audit --progress=false && cd ../.. && gulp build'
+  only:
+    - main
