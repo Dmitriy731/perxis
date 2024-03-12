@@ -22,6 +22,16 @@
         cursor: pointer;
 
         transition: width @animation-time, height @animation-time, background-color @animation-time, border-color @animation-time;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+        }
     }
 
     & .swiper-pagination-bullet-active {
