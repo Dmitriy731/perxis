@@ -1,0 +1,29 @@
+mixin heading(data)
+    +b.heading.-js-heading-slider
+        .swiper-wrapper
+            each item in data
+                +e.slide.-swiper-slide
+                    include ui-kit/images.pug
+                    +images(item.picture.source, true, item.picture.img, 1440, 710).--heading
+                    +e.content
+                        include ui-kit/title.pug
+                        +title({
+                            type: 'h1',
+                            title: item.title,
+                        }).--heading
+                        +e.subtitle !{item.subtitile}
+                        +e.descr !{item.descr}
+                        include ui-kit/button.pug
+                        +button({
+                            link: true,
+                            href: item.btn.link,
+                            title: item.title
+                        })
+                            span !{item.btn.text}
+                            include ui-kit/icon.pug
+                            +icon(item.btn.icon).--arrow
+        .swiper-pagination
+        +button({})(aria-label="Предыдущий слайд").--arrow-swiper.-swiper-button-prev
+            +icon("arrow-slider").--arrow-swiper
+        +button({})(aria-label="Предыдущий слайд").--arrow-swiper.--arrow-swiper-next.-swiper-button-next
+            +icon("arrow-slider").--arrow-swiper

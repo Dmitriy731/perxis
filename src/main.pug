@@ -22,5 +22,117 @@ block popup
 
 //- Выводим content
 block content
-
-    | Главная страница MAIN Page @$#%^!$^#)12345678
+    include section/heading.pug
+    +heading([
+        {
+            picture: {
+                img: '/images/content/heading-480.jpg',
+                source: [
+                    {
+                    'srcset' : '/images/content/heading/heading-1440.webp',
+                    'media' : '(min-width: 1024px)',
+                    'type' : 'image/webp'
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-1440.jpg',
+                    'media' : '(min-width: 1024px)',
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-768.webp',
+                    'media' : '(min-width: 480px)',
+                    'type' : 'image/webp'
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-768.jpg',
+                    'media' : '(min-width: 480px)',
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-480.jpg',
+                    'type' : 'image/webp'
+                    },
+                ]
+            },
+            title: 'Яркий заголовок',
+            subtitile: 'Слоган или предложение',
+            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            btn: {
+                text: 'подобрать',
+                icon: 'arrow',
+                link: 'javascript:void(0);',
+            }
+        },
+        {
+            picture: {
+                img: '/images/content/heading-480.jpg',
+                source: [
+                    {
+                    'srcset' : '/images/content/heading/heading-1440.webp',
+                    'media' : '(min-width: 1024px)',
+                    'type' : 'image/webp'
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-1440.jpg',
+                    'media' : '(min-width: 1024px)',
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-768.webp',
+                    'media' : '(min-width: 480px)',
+                    'type' : 'image/webp'
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-768.jpg',
+                    'media' : '(min-width: 480px)',
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-480.jpg',
+                    'type' : 'image/webp'
+                    },
+                ]
+            },
+            title: 'Яркий заголовок',
+            subtitile: 'Слоган или предложение',
+            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            btn: {
+                text: 'подобрать',
+                icon: 'arrow',
+                link: 'javascript:void(0);',
+            }
+        },
+        {
+            picture: {
+                img: '/images/content/heading-480.jpg',
+                source: [
+                    {
+                    'srcset' : '/images/content/heading/heading-1440.webp',
+                    'media' : '(min-width: 1024px)',
+                    'type' : 'image/webp'
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-1440.jpg',
+                    'media' : '(min-width: 1024px)',
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-768.webp',
+                    'media' : '(min-width: 480px)',
+                    'type' : 'image/webp'
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-768.jpg',
+                    'media' : '(min-width: 480px)',
+                    },
+                    {
+                    'srcset' : '/images/content/heading/heading-480.jpg',
+                    'type' : 'image/webp'
+                    },
+                ]
+            },
+            title: 'Яркий заголовок',
+            subtitile: 'Слоган или предложение',
+            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            btn: {
+                text: 'подобрать',
+                icon: 'arrow',
+                link: 'javascript:void(0);',
+            }
+        }
+    ])

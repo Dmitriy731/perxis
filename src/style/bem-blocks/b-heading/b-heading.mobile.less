@@ -1,0 +1,78 @@
+/* 320++  */
+
+.b-heading {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    min-height: 420px;
+
+    z-index: 1;
+
+    & .swiper-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 32px 18px 32px;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        text-align: center;
+        color: @cl-white;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 100%;
+
+        margin-bottom: 16px;
+    }
+
+    &__descr {
+        font-size: 14px;
+        line-height: 150%;
+
+        margin-bottom: 20px;
+    }
+
+    & .swiper-pagination {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        height: 16px;
+        column-gap: 16px;
+    }
+
+    & .swiper-pagination-bullet {
+        position: relative;
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: @cl-white;
+        border: 4px solid transparent;
+
+        cursor: pointer;
+
+        transition: width @animation-time, height @animation-time, background-color @animation-time, border-color @animation-time;
+    }
+
+    & .swiper-pagination-bullet-active {
+        width: 16px;
+        height: 16px;
+        border-color: @cl-vivid-pink;
+        background-color: transparent;
+    }
+}

@@ -1,6 +1,6 @@
 mixin images(obj, source, adress, width, height)
     //- добавлять loading="lazy" в случае необходимости!
-    +b.images
+    +b.images(class!=attributes.class)
         if source
             +e('picture').picture
                 each item in obj
