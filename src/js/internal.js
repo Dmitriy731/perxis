@@ -13,6 +13,7 @@
     @@include('partials/tab.js');
     @@include('partials/heading-slider.js');
     @@include('partials/header.js');
+    @@include('partials/accordion.js');
   };
 
   document.addEventListener("DOMContentLoaded", documentReady);

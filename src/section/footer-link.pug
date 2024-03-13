@@ -1,0 +1,11 @@
+mixin footer-link(link)
+    +b.footer-link.js-accordion
+        +e('button').btn.-js-accordion-btn
+            span !{link.title}
+            include ui-kit/icon.pug
+            +icon('plus').--accordion
+            +icon('minus').--accordion
+        +e.content.-js-content-accordion
+            +e.content-inner.-js-height-accordion
+                each item in link.arr
+                    +e('a')(href=item.href title=item.title).link !{item.title}

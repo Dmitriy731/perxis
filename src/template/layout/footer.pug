@@ -4,6 +4,20 @@
 //- --------------------
 //- Футер страниц
 //- ===================
-mixin footer()
-    +b('footer').footer(style="min-height: 500px")
-        | footer
+mixin footer(data)
+    +b('footer').footer
+        .b-container
+            +e.wrapper
+                +e.name.--mob !{data.name}
+                each item in data.footerLink
+                    include ../../section/footer-link.pug
+                    +footer-link(item)
+                +e.data
+                    +e.name.--desk !{data.name}
+                    each item in data.connection
+                        include ../../section/connection.pug
+                        +connection(item)
+            +e.info
+                +e.dealer © 2023 Dealer Company Name
+                +e.legal-info Правовая информация
+                +e.made Сделано в Perxis
