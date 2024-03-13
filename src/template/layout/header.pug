@@ -5,5 +5,30 @@
 //- Шапка
 //- ====================
 mixin header()
-    +b('header').header
-        | header
+    +b('header').header.-js-header
+        .b-container
+            +e.inner
+                +e.left
+                    include ../../section/burger.pug
+                    +burger()
+                    include ../../section/logo.pug
+                    +logo({})
+                    +e.name Dealer Company Name
+                +e.right
+                    include ../../section/ui-kit/button.pug
+                    +button({
+                        link: true,
+                        href: 'tel:+79876543210',
+                        title: "+7 (987) 654 32 10"
+                    }).--dark.--dont-border
+                        span +7 (987) 654 32 10
+                        include ../../section/ui-kit/icon.pug
+                        +icon('phone').--btn.--phone
+                    +button({
+                        link: true,
+                        href: 'mailto:mail@mail.ru',
+                        title: "mailto:mail@mail.ru"
+                    }).--dark
+                        span задать вопрос
+                        include ../../section/ui-kit/icon.pug
+                        +icon('message').--btn

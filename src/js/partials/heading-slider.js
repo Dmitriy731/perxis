@@ -1,9 +1,9 @@
-headingSlider = new Swiper('.js-heading-slider', {
+var headingSlider = new Swiper('.js-heading-slider', {
     speed: 500,
     slidesPerView: 1,
 
     pagination: {
-        el: '.js-heading-slider .b-pagination',
+        el: '.js-heading-slider .b-swiper-pagination',
         clickable: true,
     },
 

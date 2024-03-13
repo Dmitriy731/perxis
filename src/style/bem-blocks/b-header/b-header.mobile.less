@@ -1,0 +1,40 @@
+/* 320++  */
+.b-header {
+    position: fixed;
+    background-color: @cl-white;
+    width: 100%;
+
+    z-index: 10;
+
+    opacity: 1;
+    transform: translate(0%);
+
+    transition: opacity @animation-time, transform @animation-time;
+
+    &.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: 48px;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__name {
+        .proximabold();
+        font-size: 14px;
+        line-height: 14px;
+        margin-right: 18px;
+    }
+
+    &__right {
+        display: none;
+    }
+}

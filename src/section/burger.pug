@@ -1,0 +1,8 @@
+mixin burger()
+    +b.burger
+        +e('button')(aria-label="Меню").btn
+            include ui-kit/icon.pug
+            +icon('menu').--menu
+            include ui-kit/icon.pug
+            +icon('close').--close
+        +e.content

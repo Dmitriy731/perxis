@@ -10,7 +10,8 @@
     letter-spacing: 0.05em;
     color: @cl-white;
 
-    padding: 14px 22px;
+    min-height: 50px;
+    padding: 13px 22px;
     border: 2px solid @cl-white;
     border-radius: 8px;
     background-color: transparent;
@@ -46,5 +47,22 @@
         left: auto;
         right: 70px;
         transform: rotate(180deg) translateY(50%);
+    }
+
+    &--dark {
+        border-color: @cl-very-dark-gray-mostly-black;
+        color: @cl-very-dark-gray-mostly-black;
+    }
+
+    &--dont-border {
+        padding: 0;
+        border: none;
+        letter-spacing: 0.1px;
+        column-gap: 8px;
+
+        & span {
+            font-size: 14px;
+            line-height: 21px;
+        }
     }
 }
