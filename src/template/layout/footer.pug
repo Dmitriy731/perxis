@@ -19,5 +19,6 @@ mixin footer(data)
                         +connection(item)
             +e.info
                 +e.dealer © 2023 Dealer Company Name
-                +e.legal-info Правовая информация
-                +e.made Сделано в Perxis
+                +e('a').legal-info(href="javascript:void(0);" title="Правовая информация") Правовая информация
+                +e.made Сделано в
+                    +e('a')(href="javascript:void(0);" title="Perxis") Perxis

@@ -1,1 +1,38 @@
 /* 768++  */
+.b-footer {
+
+    &__wrapper {
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 36px;
+        row-gap: 36px;
+    }
+
+    &__name {
+        margin-bottom: 24px;
+
+        &--mob {
+            display: none;
+        }
+
+        &--desk {
+            display: flex;
+        }
+    }
+
+    &__data {
+        width: calc(~"50% - 18px");
+        order: -1;
+        margin: 0;
+        padding: 16px 0;
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 36px;
+    }
+
+    &__made {
+        margin-left: auto;
+    }
+}

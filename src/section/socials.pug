@@ -1,0 +1,6 @@
+mixin socials(socials)
+    +b.socials
+        each item in socials
+            +e('a').link(href=item.href title=item.title)
+                include ui-kit/icon.pug
+                +icon(item.icon).--socials

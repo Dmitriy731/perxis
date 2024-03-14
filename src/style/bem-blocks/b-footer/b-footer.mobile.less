@@ -22,5 +22,38 @@
 
     &__data {
         margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    &__dealer {
+        color: @cl-light-gray;
+        margin-bottom: 8px;
+    }
+
+    &__legal-info {
+        display: block;
+        color: @cl-white;
+        margin-bottom: 8px;
+        transition: opacity @animation-time;
+
+        &:hover,
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    &__made {
+        color: @cl-light-gray;
+
+        & a {
+            color: @cl-light-gray;
+            margin-left: 4px;
+            transition: opacity @animation-time;
+
+            &:hover,
+            &:active {
+                opacity: 0.6;
+            }
+        }
     }
 }

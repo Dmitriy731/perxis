@@ -20,6 +20,12 @@
         padding: 0;
 
         position: relative;
+        transition: opacity @animation-time;
+
+        &:hover,
+        &:active {
+            opacity: 0.6;
+        }
     }
 
     &__content {
@@ -36,9 +42,16 @@
     }
 
     &__link {
+        width: fit-content;
         color: @cl-white;
 
         margin-bottom: 8px;
+        transition: opacity @animation-time;
+
+        &:hover,
+        &:active {
+            opacity: 0.6;
+        }
 
         &:last-child {
             margin-bottom: 0;

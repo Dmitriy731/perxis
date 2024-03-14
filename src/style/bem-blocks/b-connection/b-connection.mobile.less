@@ -14,5 +14,12 @@
         font-size: 20px;
         line-height: 100%;
         color: @cl-white;
+
+        transition: opacity @animation-time;
+
+        &:hover,
+        &:active {
+            opacity: 0.6;
+        }
     }
 }

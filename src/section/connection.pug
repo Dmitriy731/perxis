@@ -4,8 +4,5 @@ mixin connection(connect)
         if connect.href
             +e('a')(href=connect.href title=connect.textLink).link !{connect.textLink}
         else if connect.socials
-            +e.socials
-                each item in connect.socials
-                    a(href=item.href title=item.title)
-                        include ui-kit/icon.pug
-                        +icon(item.icon)
+            include socials.pug
+            +socials(connect.socials)
