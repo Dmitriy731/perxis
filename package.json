@@ -1,7 +1,7 @@
 {
-  "name": "kontora_html_default",
+  "name": "perxis",
   "version": "0.1.0a",
-  "description": "Kontora HTML Default",
+  "description": "description",
   "keywords": [
     "project",
     "frontend",
@@ -18,8 +18,7 @@
     "node": ">= 0.10.0"
   },
   "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/kontorainc/kontora-html-default"
+    "type": "git"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

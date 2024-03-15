@@ -1,7 +1,6 @@
 ```
 #!python
 
-git submodule add -f https://ваш_логин@bitbucket.org/kontorainc/gulp-dev-default.git gulp/tasks/development
 ```
 
 
