@@ -32,10 +32,20 @@ a {
     color: @cl-theme-link;
     text-decoration: none;
     outline: none;
+    transition: opacity @animation-time;
 
     .no-touchevents &:hover,
     .touchevents &:active {
-        color: @cl-theme-link-hover;
+        opacity: 0.6;
+    }
+}
+
+button {
+    transition: opacity @animation-time;
+
+    .no-touchevents &:hover,
+    .touchevents &:active {
+        opacity: 0.6;
     }
 }
 

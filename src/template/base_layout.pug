@@ -13,40 +13,16 @@ html(lang="en")
         meta(name="skype_toolbar", content="skype_toolbar_parser_compatible")
         meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
         meta(name="google" value="notranslate")
-        //- TODO метатэги распознавания в устройствах, ненужное убрать
         meta(name="format-detection" content="telephone=no")
         meta(name="format-detection" content="address=no")
         meta(name="format-detection" content="date=no")
         meta(name="format-detection" content="email=no")
-        //- TODO закомментить перед тем как клиенту отдать!
         <!-- убрать перед запуском проекта -->
         meta(name="robots" content="noindex")
-
-        //- Цвета/тема Браузера (вкладок)
-        //- //- Chrome, Firefox, Opera
-        //- meta(name="theme-color" content="#2e3192")
-        //- //- Windows Phone
-        //- meta(name="msapplication-navbutton-color" content="#2e3192")
-        //- //- iOS Safari
-        //- meta(name="apple-mobile-web-app-status-bar-style" content="default")
-        //- подключения favicon генерировать через https://realfavicongenerator.net/ 
-        //- svg по возможности! Посмотреть код внутри
         link(rel="icon" href="/images/favicon/favicon.ico" sizes="any")
         link(rel="icon" href="/images/favicon/ico.svg" type="image/svg+xml")
-        //- link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
-        //- link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
-        //- link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
-        //- link(rel="manifest" href="/images/favicon/site.webmanifest")
-        //- link(rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5")
-        //- meta(name="msapplication-TileColor" content="#da532c")
 
         block styles
-            //- ДЛЯ ПРЕЛОАДА ШРИФТОВ - ПЕРЕЧИСЛЯЕМ ВСЕ
-            //- link(href="fonts/GraphikLCG-Regular.woff2" rel="preload" as="font" crossorigin)
-
-            //- link(href="css/normalize/normalize.css" rel="stylesheet")
-            //- link(href="css/" + file_name + ".css" rel="stylesheet")
-            //- link(href="css/main.css?" + new Date().getTime() rel="stylesheet")
             link(href="css/main.css" rel="stylesheet")
             link(href="css/mobile.css" rel="stylesheet")
             link(href="css/tablet.css" rel="stylesheet" media="(min-width: 768px)")
@@ -54,10 +30,6 @@ html(lang="en")
             link(href="css/desktop.css" rel="stylesheet" media="(min-width: 1280px)")
             link(href="css/desktop-big.css" rel="stylesheet" media="(min-width:1440px)")
             link(href="css/desktop-fullhd.css" rel="stylesheet" media="(min-width:1920px)")
-
-        //- jquery подключаем в шапке т.к. какой-то js может быть внутри компонентов
-        //- block scripts
-        //- script(src='js/jquery/jquery.min.js')
 
         block head
         title= pageTitle || ''
@@ -69,10 +41,6 @@ html(lang="en")
         meta(property="og:url" content="")
         meta(property="og:description" content=pageDescription || '')
 
-        //- а надо ли?!
-        <!--[if lte IE 9]>
-        script(src="js/html5shiv/html5shiv.min.js")
-        <![endif]-->
     body
         +b.page-wrapper
             include layout/header.pug
@@ -199,11 +167,5 @@ html(lang="en")
         block popup
 
         <script src="https://api-maps.yandex.ru/2.1/?apikey=78906ebd-6b3b-47fc-b045-89803889ef95&lang=ru_RU" type="text/javascript"></script>
-        if requireJS == true
-            - var js_filename = 'config'
-            if (typeof(file_name) !== 'undefined')
-                - var js_filename = file_name
-            script(src="js/require.js?" + new Date().getTime() data-main="js/" + js_filename)
-        else
-            script(src="js/external.js")
-            script(src="js/internal.js")
+        script(src="js/external.js")
+        script(src="js/internal.js")
