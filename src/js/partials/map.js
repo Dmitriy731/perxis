@@ -103,7 +103,7 @@
                                 return (
                                     `<div class="b-map__contact">
                                         <p class="b-map__service" >${el.title}</p>
-                                        <p class="b-map__tel">${el.tel}</p>
+                                        <a class="b-map__tel" href="tel:${el.tel.replace(/[\s\-\(\)]/g, "")}" title=${el.tel}>${el.tel}</a>
                                         <div class="b-map__time">${el.schedule.map(item => `<span>${item}</span>`).join('')}</div>
                                     </div>`
                                 )
