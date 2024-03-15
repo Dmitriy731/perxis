@@ -1,13 +1,3 @@
-//- ====================
-//- kontora: link inline
-//- 00-00-2020: author
-//- --------------------
-//- Строчная ссылка
-//- ====================
-
-//- if <a>        link = true
-//- if <button>   link = false
-
 mixin link(obj)
     if obj.link == true
         +b('a').link( href=obj.href title=`${obj.content}` )&attributes( attributes ) #{obj.content}
