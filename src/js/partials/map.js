@@ -61,6 +61,7 @@
         });
 
         var markers = [];
+        var activeMarker = null;
 
         data.forEach(item => {
             ymaps.geocode(item.service.address).then(function (res) {
@@ -76,12 +77,22 @@
                     {
                         hideIconOnBalloonOpen: false,
                         iconLayout: 'default#image',
-                        iconImageHref: './images/content/map/pin.png',
-                        iconImageSize: [76, 86],
+                        iconImageHref: './images/content/map/pin.svg',
+                        iconImageSize: [66, 76],
                         iconImageOffset: [0, 0],
                         balloonContentLayout: createBalloonLayout(item.service),
                     }
                 );
+
+                marker.events.add('click', function () {
+                    if (activeMarker) {
+                        activeMarker.options.set('iconImageHref', './images/content/map/pin.svg');
+                    }
+                    // Устанавливаем текущий маркер как активный
+                    activeMarker = marker;
+
+                    marker.options.set('iconImageHref', './images/content/map/pin-active.svg');
+                });
 
                 marker.events.add('balloonopen', function (e) {
                     mapContent.innerHTML =
