@@ -40,8 +40,8 @@ Thumbs.db
 /local/templates/*/css/*
 /local/templates/*/img/*
 /local/templates/*/fonts/*
-/html/build/*
-/build/*
+# /html/build/*
+# /build/*
 
 # Numerous always-ignore extensions
 *.bak
