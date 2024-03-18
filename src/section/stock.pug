@@ -1,0 +1,23 @@
+mixin stock(data)
+    +b.stock
+        .b-container
+            +title({
+                type: 'h2',
+                title: data.title,
+            }).--h2
+            +e.slider.-js-stock-slider
+                +e.wrapper.-swiper-wrapper
+                    each item in data.slider
+                        include card-stock.pug
+                        +card-stock(item).-swiper-slide
+                include ui-kit/swiper-pagination.pug
+                +swiper-pagination().--stock
+            include ui-kit/button.pug
+            +button({
+                link: true,
+                href: 'javascript:void(0);',
+                title: "другие акции "
+            }).--dark.--center
+                span другие акции
+                include ui-kit/icon.pug
+                +icon('arrow').--btn

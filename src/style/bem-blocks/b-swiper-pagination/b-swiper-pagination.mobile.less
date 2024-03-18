@@ -41,4 +41,19 @@
         border-color: @cl-vivid-pink;
         background-color: transparent;
     }
+
+    &--stock {
+        position: static;
+        transform: none;
+        margin: 24px auto 0;
+        justify-content: center;
+
+        & .swiper-pagination-bullet {
+            background-color: @cl-light-gray;
+        }
+
+        & .swiper-pagination-bullet-active {
+            background-color: transparent;
+        }
+    }
 }

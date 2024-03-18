@@ -128,5 +128,78 @@ block content
             }
         },
     ])
+    include section/stock.pug
+    +stock({
+        title: 'Акции и&nbsp;предложения',
+        slider: [
+            {
+                picture: {
+                    img: './images/content/stock/stock-1-mob.jpg',
+                    source: [
+                        {
+                        'srcset' : './images/content/stock/stock-1-desk.webp',
+                        'media' : '(min-width: 480px)',
+                        'type' : 'image/webp'
+                        },
+                        {
+                        'srcset' : './images/content/stock/stock-1-desk.jpg',
+                        'media' : '(min-width: 480px)',
+                        },
+                        {
+                        'srcset' : './images/content/stock/stock-1-mob.webp',
+                        'type' : 'image/webp'
+                        },
+                    ]
+                },
+                title: 'Название акции или предложения',
+                descr: 'Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.',
+            },
+            {
+                picture: {
+                    img: './images/content/stock/stock-2-mob.jpg',
+                    source: [
+                        {
+                        'srcset' : './images/content/stock/stock-2-desk.webp',
+                        'media' : '(min-width: 480px)',
+                        'type' : 'image/webp'
+                        },
+                        {
+                        'srcset' : './images/content/stock/stock-2-desk.jpg',
+                        'media' : '(min-width: 480px)',
+                        },
+                        {
+                        'srcset' : './images/content/stock/stock-2-mob.webp',
+                        'type' : 'image/webp'
+                        },
+                    ]
+                },
+                title: 'Название предложения',
+                descr: 'Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur.',
+            },
+            {
+                picture: {
+                    img: './images/content/stock/stock-3-mob.jpg',
+                    source: [
+                        {
+                        'srcset' : './images/content/stock/stock-3-desk.webp',
+                        'media' : '(min-width: 480px)',
+                        'type' : 'image/webp'
+                        },
+                        {
+                        'srcset' : './images/content/stock/stock-3-desk.jpg',
+                        'media' : '(min-width: 480px)',
+                        },
+                        {
+                        'srcset' : './images/content/stock/stock-3-mob.webp',
+                        'type' : 'image/webp'
+                        },
+                    ]
+                },
+                title: 'Название акции',
+                descr: 'Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat.',
+            },
+        ]
+    })
+
     include section/map.pug
     +map()

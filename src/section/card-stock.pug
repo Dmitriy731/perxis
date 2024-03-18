@@ -1,0 +1,18 @@
+mixin card-stock(item)
+    +b.card-stock(class!=attributes.class)
+        include ui-kit/images.pug
+        +images(item.picture.source, true, item.picture.img, 400, 227).--stock
+        +title({
+            type: 'h3',
+            title: item.title,
+        }).--h3
+        +e.descr !{item.descr}
+        include ui-kit/button.pug
+        +button({
+            link: true,
+            href: 'javascript:void(0);',
+            title: "Узнать больше "
+        }).--dark.--stock
+            span Узнать больше
+            include ui-kit/icon.pug
+            +icon('arrow').--btn

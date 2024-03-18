@@ -24,6 +24,19 @@
         }
     }
 
+    &--stock {
+        margin: 0 -24px;
+        width: calc(~"100% + 48px");
+        margin-bottom: 16px;
+    }
+
+    &--stock & {
+        &__image {
+            width: 100%;
+            aspect-ratio: ~"400/227";
+        }
+    }
+
     &__picture {
         display: block;
         line-height: 0;
