@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     max-width: 720px;
     background-color: @cl-white;
@@ -22,10 +22,11 @@
 
 
     &__scroll {
-        height: 100%;
+        height: calc(~"100svh - 56px");
         overflow-y: scroll;
         padding: 16px 0;
         margin-bottom: 36px;
+        overscroll-behavior: contain;
 
         -webkit-mask-image: linear-gradient(180deg, transparent 10px, black 20px, black calc(~"100% - 20px"), transparent calc(~"100% - 10px"));
         mask-image: linear-gradient(180deg, transparent 10px, black 20px, black calc(~"100% - 20px"), transparent calc(~"100% - 10px"));
