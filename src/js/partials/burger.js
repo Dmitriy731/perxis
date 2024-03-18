@@ -9,19 +9,19 @@
         burger.classList.toggle('open')
 
         if(burger.classList.contains('open')) {
-            wrapperBody.style.overflow = 'hidden'
+            wrapperBody.style.overflowY = 'hidden'
         } else {
-            wrapperBody.style.overflow = 'auto'
+            wrapperBody.style.overflowY = 'auto'
         }
     })
 
     closeBurger.addEventListener('click', () => {
         burger.classList.remove('open')
-        wrapperBody.style.overflow = 'auto'
+        wrapperBody.style.overflowY = 'auto'
     })
 
     closeBtnBurger.addEventListener('click', () => {
         burger.classList.remove('open')
-        wrapperBody.style.overflow = 'auto'
+        wrapperBody.style.overflowY = 'auto'
     })
 })();
