@@ -1,0 +1,8 @@
+mixin card-advantages(card)
+    +b.card-advantages(class!=attributes.class)
+        +e('img').img(src=card.img, alt=card.alt)
+        +title({
+            type: 'h3',
+            title: card.title,
+        }).--advantages
+        +e.descr !{card.descr}

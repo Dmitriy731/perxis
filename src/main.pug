@@ -200,6 +200,29 @@ block content
             },
         ]
     })
-
     include section/map.pug
     +map()
+    include section/advantages.pug
+    +advantages({
+        title: 'Наши преимущества',
+        slider: [
+            {
+                alt: 'cash',
+                img: './images/content/advantages/cash.svg',
+                title: 'Выгодно и удобно',
+                descr: 'Лучшие предложения покупки с&nbsp;учетом trade-in и&nbsp;в&nbsp;кредит',
+            },
+            {
+                alt: 'car',
+                img: './images/content/advantages/car.svg',
+                title: 'Автомобили в наличии',
+                descr: 'Выбирайте онлайн, экономя время на&nbsp;визит в&nbsp;дилерский центр',
+            },
+            {
+                alt: 'service',
+                img: './images/content/advantages/service.svg',
+                title: 'Надежный сервис',
+                descr: 'Официальный сервис, оригинальные и&nbsp;проверенные запчасти',
+            },
+        ]
+    })

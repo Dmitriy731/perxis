@@ -5,7 +5,7 @@ mixin stock(data)
                 type: 'h2',
                 title: data.title,
             }).--h2
-            +e.slider.-js-stock-slider
+            +e.slider.-js-slider
                 +e.wrapper.-swiper-wrapper
                     each item in data.slider
                         include card-stock.pug

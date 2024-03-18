@@ -18,20 +18,17 @@
         position: relative;
         height: 100%;
         max-width: 592px;
-
-        -webkit-mask-image: linear-gradient(180deg, transparent 0, black 20px, black calc(~"100% - 20px"), transparent calc(~"100% - 10px"));
-        mask-image: linear-gradient(180deg, transparent 0, black 20px, black calc(~"100% - 20px"), transparent calc(~"100% - 10px"));
     }
 
 
     &__scroll {
         height: 100%;
         overflow-y: scroll;
-        padding-top: 60px;
-        padding-bottom: 36px;
+        padding: 16px 0;
+        margin-bottom: 36px;
 
-        -webkit-mask-image: linear-gradient(180deg, transparent 50px, black 60px, black calc(~"100% - 36px"), transparent calc(~"100% - 10px"));
-        mask-image: linear-gradient(180deg, transparent 50px, black 60px, black calc(~"100% - 36px"), transparent calc(~"100% - 10px"));
+        -webkit-mask-image: linear-gradient(180deg, transparent 10px, black 20px, black calc(~"100% - 20px"), transparent calc(~"100% - 10px"));
+        mask-image: linear-gradient(180deg, transparent 10px, black 20px, black calc(~"100% - 20px"), transparent calc(~"100% - 10px"));
     }
 
     .open & {
@@ -39,9 +36,9 @@
     }
 
     &__btn {
-        position: absolute;
-        left: 8px;
-        top: 4px;
+        position: static;
+        margin-top: 4px;
+        margin-left: -6px;
         display: flex;
         justify-content: center;
         align-items: center;
