@@ -1,0 +1,22 @@
+mixin burger-menu(menu)
+        +b.burger-menu
+            .b-container
+                +e('button')(aria-label="Меню").btn.-js-close-btn
+                    include ui-kit/icon.pug
+                    +icon('close').--close
+                +e.scroll
+                    +e.burger-menu-inner
+                        +e.wrapper-links
+                            each item in menu.footerLink
+                                +e.links
+                                    include ui-kit/title.pug
+                                    +title({
+                                        type: 'h2',
+                                        title: item.title,
+                                    }).--burger
+                                    each link in item.arr
+                                        +e('a').link(href=link.href title=link.title) !{link.title}
+                        +e.connection
+                            each item in menu.connection
+                                include connection.pug
+                                +connection(item).--burger

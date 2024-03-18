@@ -45,11 +45,20 @@
         }
     }
 
+    &--close {
+        display: flex;
+        align-items: center;
+    }
+
     &--socials {
         display: flex;
         align-items: center;
         justify-content: center;
         color: @cl-white;
         font-size: 24px;
+
+        .b-connection--burger & {
+            color: @cl-very-dark-gray-mostly-black;
+        }
     }
 }

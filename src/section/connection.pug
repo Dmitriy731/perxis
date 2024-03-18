@@ -1,8 +1,19 @@
 mixin connection(connect)
-    +b.connection
-        +e.title !{connect.title}
+    +b.connection(class!=attributes.class class=connect.feedback ? '--full-width' : '')
+        if connect.title
+            +e.title !{connect.title}
         if connect.href
             +e('a')(href=connect.href title=connect.textLink).link !{connect.textLink}
-        else if connect.socials
+        if connect.socials
             include socials.pug
             +socials(connect.socials)
+        if connect.feedback
+            include ui-kit/button.pug
+            +button({
+                link: true,
+                href: 'mailto:mail@mail.ru',
+                title: "mailto:mail@mail.ru"
+            }).--dark.--burger
+                span задать вопрос
+                include ui-kit/icon.pug
+                +icon('message').--btn

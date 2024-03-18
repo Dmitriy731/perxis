@@ -1,8 +1,128 @@
 mixin burger()
-    +b.burger
-        +e('button')(aria-label="Меню").btn
+    +b.burger.-js-burger
+        +e('span').background.-js-close-burger
+        +e('button')(aria-label="Меню").btn.-js-burger-btn
             include ui-kit/icon.pug
             +icon('menu').--menu
-            include ui-kit/icon.pug
-            +icon('close').--close
-        +e.content
+        include burger-menu.pug
+        +burger-menu({
+            footerLink: [
+                {
+                    title: 'Модельный ряд',
+                    arr: [
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Название модели',
+                        },
+                    ]
+                },
+                {
+                    title: 'Покупателям',
+                    arr: [
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Автомобили в наличии',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Акции и предложения',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Кредит',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Трейд-ин',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Страхование',
+                        },
+                    ]
+                },
+                {
+                    title: 'Владельцам',
+                    arr: [
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Сервисное обслуживание',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Запасные части',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Гарантийный ремонт',
+                        },
+                        {
+                            href: 'javascript:void(0);',
+                            title: 'Запись на сервис',
+                        },
+                    ]
+                },
+            ],
+            connection: [
+                {
+                    title: 'Отдел продаж',
+                    href: 'tel:+79876543210',
+                    textLink: '+7 (987) 654 32 10',
+                },
+                {
+                    title: 'Отдел сервиса',
+                    href: 'tel:+79876543210',
+                    textLink: '+7 (987) 654 32 11',
+                },
+                {
+                    feedback: {
+                        href: 'mailto:mail@mail.ru',
+                        title: 'mailto:mail@mail.ru',
+                        text: 'задать вопрос',
+                    },
+                },
+                {
+                    socials: [
+                        {
+                            icon: 'tg',
+                            href: 'javascript:void(0);',
+                            title: 'Telegram',
+                        },
+                        {
+                            icon: 'vk',
+                            href: 'javascript:void(0);',
+                            title: 'vkontakte',
+                        },
+                        {
+                            icon: 'youtube',
+                            href: 'javascript:void(0);',
+                            title: 'Youtube',
+                        }
+                    ],
+                },
+            ],
+        })
